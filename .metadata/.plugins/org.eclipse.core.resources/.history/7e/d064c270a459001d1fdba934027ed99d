@@ -1,0 +1,39 @@
+package upStoxPOM;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class UpStoxTest {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+
+		 System.setProperty("webdriver.chrome.driver","D:\\Selenium\\chromedriver.exe");
+
+			WebDriver driver= new ChromeDriver();
+			
+			driver.manage().window().maximize();
+           driver.get("https://login-v2.upstox.com/");
+           Thread.sleep(2000);
+            
+ //Create object of loginpage
+           
+           UpStoxLoginPage page = new UpStoxLoginPage(driver);
+           
+           page.enterUserId();
+           Thread.sleep(1000);
+           page.enterPassword();
+           page.clickSignInButton();
+		
+//create object of passcodepage
+           Thread.sleep(5000);
+           PasscodePage pp = new PasscodePage(driver);
+		    pp.enterPasscode();
+		
+//Create object of Welcome page
+		    WelcomePage wp = new WelcomePage(driver);
+		    		wp.clickOnIamGoodButton();
+		
+	}
+
+}

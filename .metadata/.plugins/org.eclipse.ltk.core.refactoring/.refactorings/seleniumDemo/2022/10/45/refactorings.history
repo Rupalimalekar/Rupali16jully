@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;upStoxPOM.Passcode&apos; to &apos;PasscodePage&apos;&#x0D;&#x0A;- Original project: &apos;seleniumDemo&apos;&#x0D;&#x0A;- Original element: &apos;upStoxPOM.Passcode&apos;&#x0D;&#x0A;- Renamed element: &apos;upStoxPOM.PasscodePage&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Passcode&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;upStoxPOM{Passcode.java[Passcode" matchStrategy="1" name="PasscodePage" qualified="false" references="true" similarDeclarations="false" stamp="1667197708212" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,21 @@
+package methods;
+
+public class NonStaticMethodCall {
+
+	public static void main(String[] args) {
+// to call non static method from same class--->Need to create object of class
+		// className objectName=new className();
+		
+		NonStaticMethodCall obj=new NonStaticMethodCall();
+		
+		//Call non static method 
+		obj.myMethod();
+
+		
+		
+	}
+public void myMethod()
+
+{System.out.println("Hi I am non static  method from same class");	}
+	
+}

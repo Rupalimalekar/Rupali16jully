@@ -1,0 +1,14 @@
+package methods;
+
+public class Rivision {
+
+	public static void main(String[] args) {
+//How to call non static method from another class
+		Test t=new Test(); //Created object of another class
+		t.Test(); //Calling non static method from another class
+
+		
+		
+	}
+
+}

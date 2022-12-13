@@ -1,0 +1,64 @@
+package BaseClass;
+
+import java.io.IOException;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.testng.Reporter;
+
+import neoStoxPOMClasses.UtilityNew;
+
+
+public class Listener extends NewBase implements ITestListener
+{    
+	public void onTestSuccess(ITestResult result)
+	{
+		String methodName = result.getName();
+		Reporter.log("TC"+methodName+"is copleted succesfuly", true);
+	}
+
+	
+	public void onTestFailure(ITestResult result)
+	{
+        Reporter.log("TC"+ result.getName()+"is failed", true);
+        try {
+        	UtilityNew.screenShot(driver, result.getName());
+        }
+      catch(IOException e)
+        {
+    	  e.printStackTrace();
+        }
+	}
+
+	
+	public void onTestSkipped(ITestResult result)
+	{
+
+		Reporter.log("TC"+ result.getName()+" is skip please check", true);
+    }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

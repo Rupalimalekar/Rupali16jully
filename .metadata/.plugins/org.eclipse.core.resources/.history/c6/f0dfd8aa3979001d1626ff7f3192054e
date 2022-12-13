@@ -1,0 +1,12 @@
+package logical;
+
+public class ReverseTheString {
+
+	public static void main(String[] args)
+	{
+       Sccanner sc = new Sccaner(System.in);
+
+		
+	}
+
+}

@@ -1,0 +1,86 @@
+package neoStoxTestClass;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import BaseClass.NewBase;
+import neoStoxPOMClasses.HomePage;
+import neoStoxPOMClasses.NeoSignUpPage;
+import neoStoxPOMClasses.PasswordPage;
+import neoStoxPOMClasses.UtilityNew;
+
+
+public class ValidateNeoStoxUserName extends NewBase
+{   NeoSignUpPage signup;
+    PasswordPage password;
+    HomePage home;
+    
+    @BeforeClass
+	public void launchNeoStox() throws InterruptedException
+	{  launchBrowser();
+    	signup= new NeoSignUpPage(driver);
+    	password = new PasswordPage(driver);
+    	home = new HomePage(driver);
+	}
+	
+    @BeforeMethod
+    public void loginNeoStox() throws  IOException, InterruptedException
+    {
+    	signup.enterMobNO(driver, UtilityNew.readDataFromPropertyFile("MobNum"));
+    	signup.clickONSignUp();
+    	UtilityNew.wait(driver, 2000);
+    	password.enterPassword(driver, UtilityNew.readDataFromPropertyFile("Password"));
+    	password.clickOnSubmitButton();
+    	Thread.sleep(2000);
+    	home.handlePopUp(driver);
+    }
+	
+  @Test
+  public void validateUserName() throws InterruptedException, EncryptedDocumentException, IOException
+  {Thread.sleep(6000);
+	 Assert.assertEquals(home.getActualUserName(driver),UtilityNew.readDataFromPropertyFile(""),"TC is failed Actual and Expected not match");
+	  UtilityNew.screenShot(driver, home.getActualUserName(driver));
+  }
+  
+  @Test
+  public void validateAccBalance()
+  {
+	  Assert.assertNotNull(home.getBalance(driver));
+	  Reporter.log("ACC balance is"+home.getBalance(driver), true);
+  }
+  
+  
+  
+  @AfterMethod  
+  public void logout()
+  {
+	  home.logoutFromNeoStox(driver);
+	  
+  }
+  
+  @AfterClass 
+  
+  public void closeApp()
+  {
+	  driver.close();
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

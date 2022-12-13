@@ -1,0 +1,94 @@
+package stringMethods;
+
+public class StringUse {
+
+	public static void main(String[] args)
+	{
+       String s="Pune";
+       String s1 = new String("Pune");
+  //===================================================================
+       //length()  method use
+       String a ="Velocity";
+       System.out.println(a.length());
+     int lengthOfString = a.length();
+     System.out.println("String length is " +lengthOfString);
+     
+     String a1 ="Pune Katraj";
+     System.out.println(a1.length());
+     int outPut = a1.length();
+     System.out.println("Length of string is "+outPut);
+     System.out.println("==============================");
+//===========================================================================
+     // 2.TOUppercase()
+     //3.toLowerCase() Method use
+     
+     String b="Baramati";
+     System.out.println(b.toUpperCase());
+     String myString = b.toUpperCase();
+     System.out.println("Upper case string is "+myString);
+     
+     String thisString =myString.toLowerCase();
+     System.out.println("Lower case string is "+thisString);
+     System.out.println("==========================================");
+//==============================================================================
+     //4.equals() Mthod use
+     
+     String c="Katraj";
+     String c1="Katraj";
+     String c2= new String ("Katraj");
+     String c3 = new String("Katraj");
+     System.out.println(c==c1);
+     System.out.println(c1==c2);
+     System.out.println(c2==c3);
+     
+     System.out.println(c1. equals( c2));
+     System.out.println(c.equals(c1));
+     System.out.println(c2.equals(c3));
+     
+     String c4="Mumbai";
+     System.out.println(c3.equals(c4));
+     String c5="Trajka";
+     System.out.println(c5.equals(c3));
+     System.out.println("===================================");
+//==========================================================================
+     //5.contains() Method use
+      
+     String d="India";
+    System.out.println(d.contains("Ind"));
+     System.out.println(d.contains("Ia"));
+     System.out.println(d.contains("ia"));
+     System.out.println(d.contains("n"));
+     System.out.println("==========================");
+//================================================================================
+     //6.isEmpty() Method use
+     
+     String e="Mahatrashtra";
+     System.out.println(e.isEmpty());
+     
+     String e1="  ";
+     System.out.println(e1.isEmpty());
+     
+     
+     
+     
+     
+     
+     
+     
+     
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testNGXML.Testing2">
+      <methods>
+      <include name="E"/>
+      <include name="H"/>
+      </methods>
+      </class>
+      <class name="testNGXML.Testing1">
+      <methods>
+      <exclude name="A"/>
+      <exclude name="C"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

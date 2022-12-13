@@ -1,0 +1,16 @@
+package methods;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public void Test()
+	
+	
+	{ System.out.println("Hi I am non static method from another class");
+	
+	}
+	
+}

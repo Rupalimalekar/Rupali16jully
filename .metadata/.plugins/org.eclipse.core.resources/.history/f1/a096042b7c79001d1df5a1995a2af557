@@ -1,0 +1,16 @@
+package logical;
+
+public class ReverseTheNumberWithoutString {
+
+	public static void main(String[] args) 
+	{
+       int orgNumber=1234;
+       int revNumber=0;
+       
+       System.out.println(orgNumber/10);
+		
+		
+
+	}
+
+}

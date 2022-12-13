@@ -1,0 +1,24 @@
+package logical;
+
+import java.util.Scanner;
+
+public class FactorialOfNumber {
+
+	public static void main(String[] args)
+	{ 
+//		3!=3*2*1=6
+		
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter any number");
+		int number = sc.nextInt();
+		int mul = 1;
+		
+		for(int i=number;i>=1;i--)
+		{
+			mul=mul*1;
+		}
+        System.out.println("Factorial of "+number+ "is" +mul);
+
+	}
+
+}

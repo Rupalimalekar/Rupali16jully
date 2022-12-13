@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" serially="tests">
+  <test thread-count="5" name="Test"/>
+  <test name="Test1">
+    <classes>
+      <class name="serialParallelExecution.MyTest1"/>
+    </classes>
+  </test> <!-- Test -->
+     <test thread-count="5" name="Test3"/>
+  <test name="Test2">
+    <classes>
+      <class name="serialParallelExecution.MyTest2"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
