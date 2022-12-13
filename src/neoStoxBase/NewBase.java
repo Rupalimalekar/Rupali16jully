@@ -16,6 +16,8 @@ public class NewBase
 	{
 		  System.setProperty("webdriver.chrome.driver","D:\\Selenium\\chromedriver.exe");
 
+		  
+		  
 			WebDriver driver= new ChromeDriver();
 			driver.get(UtilityNew.readDataFromPropertyFile("Url"));
 			driver.manage().window().maximize();
