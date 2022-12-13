@@ -21,6 +21,10 @@ public class NewBase
 			driver.manage().window().maximize();
             Reporter.log("Launching browser", true);
             Utility.wait(driver, 1000);
+            
+            
+            
+            
 	}
 	
 	public void closingBrowser() throws InterruptedException
