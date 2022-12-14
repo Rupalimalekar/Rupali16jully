@@ -22,11 +22,7 @@ public class NewBase
 			driver.get(UtilityNew.readDataFromPropertyFile("Url"));
 			driver.manage().window().maximize();
             Reporter.log("Launching browser", true);
-            Utility.wait(driver, 1000);
-            
-            
-            
-            
+            Utility.wait(driver, 1000);        
 	}
 	
 	public void closingBrowser() throws InterruptedException
