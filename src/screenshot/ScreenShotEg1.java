@@ -17,14 +17,11 @@ public class ScreenShotEg1 {
 	    System.setProperty("webdriver.chrome.driver","D:\\Selenium\\chromedriver.exe");
 
 			WebDriver driver= new ChromeDriver();
-			
 			driver.manage().window().maximize();
              driver.get("https://vctcpune.com/");
              File source= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
       		System.out.println(source);
-
       		File destination=new File("D:\\ScreenshotsFile\\screenshotFile2.png");
-      		
       		FileHandler.copy(source, destination);
 		
       		
