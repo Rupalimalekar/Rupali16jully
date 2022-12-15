@@ -21,11 +21,6 @@ public class ScreenShotEg2 {
 				WebDriver driver= new ChromeDriver();
 				
 				driver.manage().window().maximize();
-
-				
-				
-				
-				
 				
 		driver.get("https://www.amazon.com/");
 		
