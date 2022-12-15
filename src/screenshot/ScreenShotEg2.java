@@ -22,6 +22,11 @@ public class ScreenShotEg2 {
 				
 				driver.manage().window().maximize();
 				
+				
+				
+				
+				
+				
 		driver.get("https://www.amazon.com/");
 		
 		 File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
