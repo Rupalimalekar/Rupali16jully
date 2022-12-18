@@ -24,6 +24,10 @@ public class ScreenShotEg1 {
       		File destination=new File("D:\\ScreenshotsFile\\screenshotFile2.png");
       		FileHandler.copy(source, destination);
 		
+      
+      		
+      		
+      		
       		
             driver.get("https://facebook.com/");
             File source1= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
